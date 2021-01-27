@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :friend_request, -> { Friendship. not_friends },through: :friend_received,source: :sender
   has_many :posts,dependent: :destroy
   has_many :likes,dependent: :destroy
+  has_many :comments,dependent: :destroy
 end
